@@ -4,16 +4,12 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="AppAcad.MainPage">
-
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Entry x:Name="NameEntry" 
-            Margin="25,50,25,0"
-            Text="Nome: "/>
-        <Button x:Name="NextButton"
-            VerticalOptions="EndAndExpand"
-            Text="Next"/>
-    </StackLayout>
-
+             x:Class="AppAcad.ExercisePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

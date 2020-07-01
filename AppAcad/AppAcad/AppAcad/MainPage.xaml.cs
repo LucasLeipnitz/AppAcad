@@ -16,6 +16,12 @@ namespace AppAcad
         public MainPage()
         {
             InitializeComponent();
+            NextButton.Clicked += NextButton_Clicked;
+        }
+
+        private void NextButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ExercisePage());
         }
     }
 }
