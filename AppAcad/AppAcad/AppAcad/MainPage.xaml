@@ -8,9 +8,17 @@
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Entry x:Name="NameEntry" 
+        
+        <Label x:Name="NameLabel" 
             Margin="25,50,25,0"
-            Text="Nome: "/>
+            Text="Nome:"
+            FontSize="20"/>
+        <Entry x:Name="NameEntry" 
+            Margin="20,0,25,0"
+            Text="Insira o nome "/>
+        <Button x:Name="SaveButton"
+            Margin="20,0,25,0"
+            Text="Save"/>
         <Button x:Name="NextButton"
             VerticalOptions="EndAndExpand"
             Text="Next"/>

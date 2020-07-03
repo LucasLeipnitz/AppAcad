@@ -4,39 +4,20 @@ using System.Text;
 
 namespace AppAcad
 {
+    [Serializable()]
     class User
     {
-        private string name;
-        private float height;
-        private float weight;
-        private float waist;
+        public string Name { get; set; }
+        public float Height { get;set; }
+        public float Weight { get; set; }
+        public float Waist { get; set; }
 
         public User(string name, float height, float weight, float waist)
         {
-            this.name = name;
-            this.height = height;
-            this.weight = weight;
-            this.waist = waist;
-        }
-
-        public string getName()
-        {
-            return name;
-        }
-
-        public float getHeight()
-        {
-            return height;
-        }
-
-        public float getWeight()
-        {
-            return weight;
-        }
-
-        public float getWaist()
-        {
-            return waist;
+            this.Name = name;
+            this.Height = height;
+            this.Weight = weight;
+            this.Waist = waist;
         }
     }
 }

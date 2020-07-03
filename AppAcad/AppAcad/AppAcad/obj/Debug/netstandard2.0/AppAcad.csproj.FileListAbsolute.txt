@@ -1,0 +1,15 @@
+C:\Users\Lucas\source\repos\AppAcad\AppAcad\AppAcad\AppAcad\bin\Debug\netstandard2.0\AppAcad.deps.json
+C:\Users\Lucas\source\repos\AppAcad\AppAcad\AppAcad\AppAcad\bin\Debug\netstandard2.0\AppAcad.dll
+C:\Users\Lucas\source\repos\AppAcad\AppAcad\AppAcad\AppAcad\bin\Debug\netstandard2.0\ref\AppAcad.dll
+C:\Users\Lucas\source\repos\AppAcad\AppAcad\AppAcad\AppAcad\bin\Debug\netstandard2.0\AppAcad.pdb
+C:\Users\Lucas\source\repos\AppAcad\AppAcad\AppAcad\AppAcad\obj\Debug\netstandard2.0\AppAcad.csprojAssemblyReference.cache
+C:\Users\Lucas\source\repos\AppAcad\AppAcad\AppAcad\AppAcad\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Lucas\source\repos\AppAcad\AppAcad\AppAcad\AppAcad\obj\Debug\netstandard2.0\ExercisePage.xaml.g.cs
+C:\Users\Lucas\source\repos\AppAcad\AppAcad\AppAcad\AppAcad\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Lucas\source\repos\AppAcad\AppAcad\AppAcad\AppAcad\obj\Debug\netstandard2.0\AppAcad.AssemblyInfoInputs.cache
+C:\Users\Lucas\source\repos\AppAcad\AppAcad\AppAcad\AppAcad\obj\Debug\netstandard2.0\AppAcad.AssemblyInfo.cs
+C:\Users\Lucas\source\repos\AppAcad\AppAcad\AppAcad\AppAcad\obj\Debug\netstandard2.0\AppAcad.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\source\repos\AppAcad\AppAcad\AppAcad\AppAcad\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Lucas\source\repos\AppAcad\AppAcad\AppAcad\AppAcad\obj\Debug\netstandard2.0\AppAcad.dll
+C:\Users\Lucas\source\repos\AppAcad\AppAcad\AppAcad\AppAcad\obj\Debug\netstandard2.0\ref\AppAcad.dll
+C:\Users\Lucas\source\repos\AppAcad\AppAcad\AppAcad\AppAcad\obj\Debug\netstandard2.0\AppAcad.pdb
