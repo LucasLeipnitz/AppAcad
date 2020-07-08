@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppAcad.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+
+        <Label x:Name="WarningLabel" 
+            Margin="25,0,25,0"
+            Text="Nao foi possivel carregar o arquivo"
+            FontSize="20"
+            IsVisible="false"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="85" />
+            </Grid.ColumnDefinitions>
+            <Label x:Name="NameLabel"
+                Grid.Row="0" 
+                Grid.Column="0"
+                HorizontalTextAlignment="Start"
+                Margin="25,50,0,0"
+                Text="Nome:"
+                FontSize="20"/>
+            <Entry x:Name="NameEntry"
+                Grid.Row="0" 
+                Grid.Column="1"
+                Margin="0,45,25,0"
+                Text="Nome"/>
+        </Grid>
+        <Button x:Name="SaveButton"
+            Margin="20,0,25,0"
+            Text="Save"/>
+        <Button x:Name="LoadButton"
+            Margin="20,0,25,0"
+            Text="Load"/>
+        <Button x:Name="NextButton"
+            VerticalOptions="EndAndExpand"
+            Text="Next"/>
+    </StackLayout>
+
+</ContentPage>

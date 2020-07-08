@@ -9,7 +9,12 @@ namespace AppAcad
     class Control
     {
         public User User { get; set; }
-        private const string FileName = "save.bin";
+        private string FileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "save.bin");
+
+        public Control(string Name, float Height, float Weight, float Weist)
+        {
+            this.User = new User(Name, Height, Weight, Weist);
+        }
 
         public bool CheckIfFileExists()
         {
@@ -18,7 +23,7 @@ namespace AppAcad
 
         public void SaveUser()
         {
-            Stream SaveFileStream = File.Create(FileName);
+            Stream SaveFileStream = File.Create(this.FileName);
             BinaryFormatter serializer = new BinaryFormatter();
             serializer.Serialize(SaveFileStream, this.User);
             SaveFileStream.Close();
@@ -26,7 +31,7 @@ namespace AppAcad
 
         public void LoadUser()
         {
-            Stream openFileStream = File.OpenRead(FileName);
+            Stream openFileStream = File.OpenRead(this.FileName);
             BinaryFormatter deserializer = new BinaryFormatter();
             this.User = (User)deserializer.Deserialize(openFileStream);
             openFileStream.Close();
