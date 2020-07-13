@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppAcad.Pages.ExercisePage1">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Dia 1" FontSize="35" Margin="150,0,0,0"/>
+            <Grid Margin="0,0,0,0" BackgroundColor="Gray" Padding="5,5,5,5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                </Grid.ColumnDefinitions>
+
+                <BoxView Color="White" Grid.Column="0"/>
+                <Label Text="Nome" Grid.Column="0" Margin="5" FontSize="20"/>
+                <BoxView Color="White" Grid.Column="1"/>
+                <Label Text="Peso" Grid.Column="1" Margin="5" FontSize="20"/>
+                <BoxView Color="White" Grid.Column="2"/>
+                <Label Text="Vezes" Grid.Column="2" Margin="5" FontSize="20"/>
+                <BoxView Color="White" Grid.Column="3"/>
+                <Label Text="Sets" Grid.Column="3" Margin="5" FontSize="20"/>
+
+                <BoxView Color="White" Grid.Row="1" Grid.Column="0" IsVisible="true"/>
+                <Entry x:Name="Ex1" Text="Exercício1" Grid.Row="1" Grid.Column="0" Margin="5" FontSize="15" IsVisible="true"/>
+                <BoxView Color="White" Grid.Row="1" Grid.Column="1" IsVisible="true"/>
+                <Entry x:Name="We1" Text="Peso" Grid.Row="1" Grid.Column="1" Margin="5" FontSize="15" IsVisible="true"/>
+                <BoxView Color="White" Grid.Row="1" Grid.Column="2" IsVisible="true"/>
+                <Entry x:Name="Re1" Text="Vezes" Grid.Row="1" Grid.Column="2" Margin="5" FontSize="15" IsVisible="true"/>
+                <BoxView Color="White" Grid.Row="1" Grid.Column="3" IsVisible="true"/>
+                <Entry x:Name="Se1" Text="Sets" Grid.Row="1" Grid.Column="3" Margin="5" FontSize="15" IsVisible="true"/>
+
+                <BoxView Color="White" Grid.Row="2" Grid.Column="0" IsVisible="true"/>
+                <Entry x:Name="Ex2" Text="Exercício2" Grid.Row="2" Grid.Column="0" Margin="5" FontSize="15" IsVisible="true"/>
+                <BoxView Color="White" Grid.Row="2" Grid.Column="1" IsVisible="true"/>
+                <Entry x:Name="We2" Text="Peso" Grid.Row="2" Grid.Column="1" Margin="5" FontSize="15" IsVisible="true"/>
+                <BoxView Color="White" Grid.Row="2" Grid.Column="2" IsVisible="true"/>
+                <Entry x:Name="Re2" Text="Vezes" Grid.Row="2" Grid.Column="2" Margin="5" FontSize="15" IsVisible="true"/>
+                <BoxView Color="White" Grid.Row="2" Grid.Column="3" IsVisible="true"/>
+                <Entry x:Name="Se2" Text="Sets" Grid.Row="2" Grid.Column="3" Margin="5" FontSize="15" IsVisible="true"/>
+
+                <BoxView Color="White" Grid.Row="3" Grid.Column="0" IsVisible="true"/>
+                <Entry x:Name="Ex3" Text="Exercício3" Grid.Row="3" Grid.Column="0" Margin="5" FontSize="15" IsVisible="true"/>
+                <BoxView Color="White" Grid.Row="3" Grid.Column="1" IsVisible="true"/>
+                <Entry x:Name="We3" Text="Peso" Grid.Row="3" Grid.Column="1" Margin="5" FontSize="15" IsVisible="true"/>
+                <BoxView Color="White" Grid.Row="3" Grid.Column="2" IsVisible="true"/>
+                <Entry x:Name="Re3" Text="Vezes" Grid.Row="3" Grid.Column="2" Margin="5" FontSize="15" IsVisible="true"/>
+                <BoxView Color="White" Grid.Row="3" Grid.Column="3" IsVisible="true"/>
+                <Entry x:Name="Se3" Text="Sets" Grid.Row="3" Grid.Column="3" Margin="5" FontSize="15" IsVisible="true"/>
+
+                <BoxView Color="White" Grid.Row="4" Grid.Column="0" IsVisible="true"/>
+                <Entry x:Name="Ex4" Text="Exercício4" Grid.Row="4" Grid.Column="0" Margin="5" FontSize="15" IsVisible="true"/>
+                <BoxView Color="White" Grid.Row="4" Grid.Column="1" IsVisible="true"/>
+                <Entry x:Name="We4" Text="Peso" Grid.Row="4" Grid.Column="1" Margin="5" FontSize="15" IsVisible="true"/>
+                <BoxView Color="White" Grid.Row="4" Grid.Column="2" IsVisible="true"/>
+                <Entry x:Name="Re4" Text="Vezes" Grid.Row="4" Grid.Column="2" Margin="5" FontSize="15" IsVisible="true"/>
+                <BoxView Color="White" Grid.Row="4" Grid.Column="3" IsVisible="true"/>
+                <Entry x:Name="Se4" Text="Sets" Grid.Row="4" Grid.Column="3" Margin="5" FontSize="15" IsVisible="true"/>
+
+                <BoxView Color="White" Grid.Row="5" Grid.Column="0" IsVisible="true"/>
+                <Entry x:Name="Ex5" Text="Exercício5" Grid.Row="5" Grid.Column="0" Margin="5" FontSize="15" IsVisible="true"/>
+                <BoxView Color="White" Grid.Row="5" Grid.Column="1" IsVisible="true"/>
+                <Entry x:Name="We5" Text="Peso" Grid.Row="5" Grid.Column="1" Margin="5" FontSize="15" IsVisible="true"/>
+                <BoxView Color="White" Grid.Row="5" Grid.Column="2" IsVisible="true"/>
+                <Entry x:Name="Re5" Text="Vezes" Grid.Row="5" Grid.Column="2" Margin="5" FontSize="15" IsVisible="true"/>
+                <BoxView Color="White" Grid.Row="5" Grid.Column="3" IsVisible="true"/>
+                <Entry x:Name="Se5" Text="Sets" Grid.Row="5" Grid.Column="3" Margin="5" FontSize="15" IsVisible="true"/>
+
+                <BoxView Color="White" Grid.Row="6" Grid.Column="0" IsVisible="true"/>
+                <Entry x:Name="Ex6" Text="Exercício6" Grid.Row="6" Grid.Column="0" Margin="5" FontSize="15" IsVisible="true"/>
+                <BoxView Color="White" Grid.Row="6" Grid.Column="1" IsVisible="true"/>
+                <Entry x:Name="We6" Text="Peso" Grid.Row="6" Grid.Column="1" Margin="5" FontSize="15" IsVisible="true"/>
+                <BoxView Color="White" Grid.Row="6" Grid.Column="2" IsVisible="true"/>
+                <Entry x:Name="Re6" Text="Vezes" Grid.Row="6" Grid.Column="2" Margin="5" FontSize="15" IsVisible="true"/>
+                <BoxView Color="White" Grid.Row="6" Grid.Column="3" IsVisible="true"/>
+                <Entry x:Name="Se6" Text="Sets" Grid.Row="6" Grid.Column="3" Margin="5" FontSize="15" IsVisible="true"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

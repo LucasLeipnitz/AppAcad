@@ -14,25 +14,38 @@
             Text="Nao foi possivel carregar o arquivo"
             FontSize="20"
             IsVisible="false"/>
-        <Grid>
+        <Grid Margin="25,25,25,25">
             <Grid.RowDefinitions>
                 <RowDefinition Height="90"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="85" />
+                <ColumnDefinition Width="85"/>
             </Grid.ColumnDefinitions>
-            <Label x:Name="NameLabel"
-                Grid.Row="0" 
-                Grid.Column="0"
-                HorizontalTextAlignment="Start"
-                Margin="25,50,0,0"
-                Text="Nome:"
-                FontSize="20"/>
-            <Entry x:Name="NameEntry"
-                Grid.Row="0" 
-                Grid.Column="1"
-                Margin="0,45,25,0"
-                Text="Nome"/>
+            <Label x:Name="NameLabel" Text="Nome:" FontSize="20"
+                   Grid.Row="0" Grid.Column="0"
+                   HorizontalTextAlignment="Start"
+                   Margin="0,35,0,0"/>
+            <Entry x:Name="NameEntry" Text="Nome" FontSize="20"
+                   Grid.Row="0" Grid.Column="1"
+                   Margin="0,25,0,10"/>
+            <Label x:Name="HeightLabel" Text="Altura:" FontSize="20"
+                   Grid.Row="1" Grid.Column="0"
+                   Margin="0,35,0,0"/>
+            <Entry x:Name="HeightEntry" Text="Altura" FontSize="20"
+                   Grid.Row="1" Grid.Column="1"
+                   Margin="0,25,0,10"/>
+            <Label x:Name="WeightLabel" Text="Peso:" FontSize="20"
+                   Grid.Row="2" Grid.Column="0"
+                   Margin="0,35,0,0"/>
+            <Entry x:Name="WeightEntry" Text="Peso" FontSize="20"
+                   Grid.Row="2" Grid.Column="1"
+                   Margin="0,25,0,10"/>
+            <Label x:Name="WaistLabel" Text="Cintura:" FontSize="20"
+                   Grid.Row="3" Grid.Column="0"
+                   Margin="0,35,0,0"/>
+            <Entry x:Name="WaistEntry" Text="Cintura" FontSize="20"
+                   Grid.Row="3" Grid.Column="1"
+                   Margin="0,25,0,10"/>
         </Grid>
         <Button x:Name="SaveButton"
             Margin="20,0,25,0"

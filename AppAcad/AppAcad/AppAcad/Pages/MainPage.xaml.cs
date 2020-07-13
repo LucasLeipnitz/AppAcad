@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppAcad.Pages;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -30,6 +31,9 @@ namespace AppAcad
             {
                 Control.LoadUser();
                 NameEntry.Text = Control.User.Name;
+                HeightEntry.Text = Control.User.Height.ToString();
+                WeightEntry.Text = Control.User.Weight.ToString();
+                WaistEntry.Text = Control.User.Waist.ToString();
             }
             else
             {
@@ -40,12 +44,15 @@ namespace AppAcad
         private void SaveButton_Clicked(object sender, EventArgs e)
         {
             Control.User.Name = NameEntry.Text;
+            Control.User.Height = float.Parse(HeightEntry.Text);
+            Control.User.Weight = float.Parse(WeightEntry.Text);
+            Control.User.Waist = float.Parse(WaistEntry.Text);
             Control.SaveUser();
         }
 
         private void NextButton_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new ExercisePage());
+            Navigation.PushAsync(new ExercisePage1());
         }
     }
 }

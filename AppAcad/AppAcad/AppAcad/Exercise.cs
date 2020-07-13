@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AppAcad
 {
-    class Exercise
+    public class Exercise
     {
         public string Name { get; set; }
         public int Kg { get; set; }
