@@ -31,19 +31,19 @@
             <Label x:Name="HeightLabel" Text="Altura:" FontSize="20"
                    Grid.Row="1" Grid.Column="0"
                    Margin="0,35,0,0"/>
-            <Entry x:Name="HeightEntry" Text="Altura" FontSize="20"
+            <Entry x:Name="HeightEntry" Text="0" FontSize="20"
                    Grid.Row="1" Grid.Column="1"
                    Margin="0,25,0,10"/>
             <Label x:Name="WeightLabel" Text="Peso:" FontSize="20"
                    Grid.Row="2" Grid.Column="0"
                    Margin="0,35,0,0"/>
-            <Entry x:Name="WeightEntry" Text="Peso" FontSize="20"
+            <Entry x:Name="WeightEntry" Text="0" FontSize="20"
                    Grid.Row="2" Grid.Column="1"
                    Margin="0,25,0,10"/>
             <Label x:Name="WaistLabel" Text="Cintura:" FontSize="20"
                    Grid.Row="3" Grid.Column="0"
                    Margin="0,35,0,0"/>
-            <Entry x:Name="WaistEntry" Text="Cintura" FontSize="20"
+            <Entry x:Name="WaistEntry" Text="0" FontSize="20"
                    Grid.Row="3" Grid.Column="1"
                    Margin="0,25,0,10"/>
         </Grid>

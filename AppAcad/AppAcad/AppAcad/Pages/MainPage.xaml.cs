@@ -16,13 +16,31 @@ namespace AppAcad
     {
 
         private Control Control = new Control("Nome",0,0,0);
+        private ExercisePage1 ExPage1 = new ExercisePage1();
 
         public MainPage()
         {
             InitializeComponent();
+            InitializeDays();
+            InitializeExercises();
             NextButton.Clicked += NextButton_Clicked;
             SaveButton.Clicked += SaveButton_Clicked;
             LoadButton.Clicked += LoadButton_Clicked;
+        }
+
+        private void InitializeDays()
+        {
+            //Dia1 e Dia2
+            Control.User.NewDay();
+            Control.User.NewDay();
+        }
+
+        private void InitializeExercises()
+        {
+            for(int i = 0; i < 6; i++)
+            {
+                Control.User.AddExercise(ExPage1.GetExercise(i), 0);
+            }
         }
 
         private void LoadButton_Clicked(object sender, EventArgs e)
@@ -34,6 +52,10 @@ namespace AppAcad
                 HeightEntry.Text = Control.User.Height.ToString();
                 WeightEntry.Text = Control.User.Weight.ToString();
                 WaistEntry.Text = Control.User.Waist.ToString();
+                for (int i = 0; i < 6; i++)
+                {
+                    ExPage1.SetExercise(Control.User.GetDay(0).GetExercise(i),i);
+                }
             }
             else
             {
@@ -47,12 +69,16 @@ namespace AppAcad
             Control.User.Height = float.Parse(HeightEntry.Text);
             Control.User.Weight = float.Parse(WeightEntry.Text);
             Control.User.Waist = float.Parse(WaistEntry.Text);
+            for (int i = 0; i < 6; i++)
+            {
+                Control.User.GetDay(0).SetExercise(ExPage1.GetExercise(i),i);
+            }
             Control.SaveUser();
         }
 
         private void NextButton_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new ExercisePage1());
+            Navigation.PushAsync(ExPage1);
         }
     }
 }

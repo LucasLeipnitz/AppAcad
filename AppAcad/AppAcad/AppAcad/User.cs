@@ -11,7 +11,7 @@ namespace AppAcad
         public float Height { get;set; }
         public float Weight { get; set; }
         public float Waist { get; set; }
-        private List<Exercise> exerciseList = new List<Exercise>();
+        private List<Day> dayList = new List<Day>();
 
         public User(string name, float height, float weight, float waist)
         {
@@ -21,20 +21,25 @@ namespace AppAcad
             this.Waist = waist;
         }
 
-        public void NewExercise(string name, int kg, int sets, int minRepeat, int maxRepeat)
+        public void NewDay()
         {
-            Exercise exercise = new Exercise(name, kg, sets, minRepeat, maxRepeat);
-            exerciseList.Add(exercise);
+            Day day = new Day();
+            dayList.Add(day);
         }
 
-        public void DeleteExercise(int index)
+        public void DeleteDay(int index)
         {
-            exerciseList.RemoveAt(index);
+            dayList.RemoveAt(index);
         }
 
-        public Exercise GetExercise(int index)
+        public Day GetDay(int index)
         {
-            return exerciseList[index];
+            return dayList[index];
+        }
+
+        public void AddExercise(Exercise exercise, int index)
+        {
+            dayList[index].NewExercise(exercise);   
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Text;
 
 namespace AppAcad
 {
+    [Serializable()]
     public class Exercise
     {
         public string Name { get; set; }

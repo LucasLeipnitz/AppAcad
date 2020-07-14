@@ -4,12 +4,12 @@ using System.Text;
 
 namespace AppAcad
 {
+    [Serializable()]
     class Day
     {
         private List<Exercise> exerciseList = new List<Exercise>();
-        public void NewExercise(string name, int kg, int sets, int minRepeat, int maxRepeat)
+        public void NewExercise(Exercise exercise)
         {
-            Exercise exercise = new Exercise(name, kg, sets, minRepeat, maxRepeat);
             exerciseList.Add(exercise);
         }
 
@@ -21,6 +21,11 @@ namespace AppAcad
         public Exercise GetExercise(int index)
         {
             return exerciseList[index];
+        }
+
+        public Exercise SetExercise(Exercise exercise, int index)
+        {
+            return exerciseList[index] = exercise;
         }
     }
 }
