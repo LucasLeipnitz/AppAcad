@@ -8,16 +8,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("AppAcad.Pages.ExercisePage1.xaml", "Pages/ExercisePage1.xaml", typeof(global::AppAcad.Pages.ExercisePage1))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("AppAcad.Pages.ExercisePage.xaml", "Pages/ExercisePage.xaml", typeof(global::AppAcad.Pages.ExercisePage))]
 
 namespace AppAcad.Pages {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Pages\\ExercisePage1.xaml")]
-    public partial class ExercisePage1 : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Pages\\ExercisePage.xaml")]
+    public partial class ExercisePage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Label WarningLabel;
+        private global::Xamarin.Forms.Label DayLabel;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.Label Warning;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Entry Ex1;
@@ -96,8 +99,9 @@ namespace AppAcad.Pages {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(ExercisePage1));
-            WarningLabel = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "WarningLabel");
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(ExercisePage));
+            DayLabel = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "DayLabel");
+            Warning = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "Warning");
             Ex1 = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "Ex1");
             We1 = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "We1");
             Re1 = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "Re1");

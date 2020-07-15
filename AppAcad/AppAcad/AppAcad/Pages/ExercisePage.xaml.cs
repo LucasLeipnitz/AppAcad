@@ -10,56 +10,55 @@ using Xamarin.Forms.Xaml;
 namespace AppAcad.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ExercisePage1 : ContentPage
+    public partial class ExercisePage : ContentPage
     {
 
-        private ExercisePage2 ExPage2 = new ExercisePage2();
-        private bool warning = false;
+        private ExercisePage ExPage = null;
 
-        public ExercisePage1()
+        public ExercisePage(string day, bool nextButtonAvaliable)
         {
             InitializeComponent();
+            DayLabel.Text = day;
+            NextButton.IsEnabled = nextButtonAvaliable;
             NextButton.Clicked += NextButton_Clicked;
         }
 
         private void NextButton_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(ExPage2);
+            ExPage = new ExercisePage("Dia 2", false);
+            Navigation.PushAsync(ExPage);
         }
 
-        public ExercisePage2 GetExPage()
+        public ExercisePage GetExPage()
         {
-            return ExPage2;
-        }
-
-        public bool GetWarning()
-        {
-            return warning;
-        }
-
-        public void DeactivateWarning()
-        {
-            warning = false;
-            //WarningLabel.IsVisible = false;
+            return ExPage;
         }
 
         public Exercise GetExercise(int index)
         {
-            switch (index) {
+            Exercise ex = new Exercise("Exercício", 0, 0, 0, 0);
+            switch (index)
+            {
                 case 0:
-                    return ExerciseConstructor(Ex1.Text, We1.Text, Se1.Text, Re1.Text);
+                    ex = new Exercise(Ex1.Text, int.Parse(We1.Text), int.Parse(Se1.Text), int.Parse(Re1.Text), int.Parse(Re1.Text));
+                    return ex;
                 case 1:
-                    return ExerciseConstructor(Ex2.Text, We2.Text, Se2.Text, Re2.Text);
+                    ex = new Exercise(Ex2.Text, int.Parse(We2.Text), int.Parse(Se2.Text), int.Parse(Re2.Text), int.Parse(Re2.Text));
+                    return ex;
                 case 2:
-                    return ExerciseConstructor(Ex3.Text, We3.Text, Se3.Text, Re3.Text);
+                    ex = new Exercise(Ex3.Text, int.Parse(We3.Text), int.Parse(Se3.Text), int.Parse(Re3.Text), int.Parse(Re3.Text));
+                    return ex;
                 case 3:
-                    return ExerciseConstructor(Ex4.Text, We4.Text, Se4.Text, Re4.Text);
+                    ex = new Exercise(Ex4.Text, int.Parse(We4.Text), int.Parse(Se4.Text), int.Parse(Re4.Text), int.Parse(Re4.Text));
+                    return ex;
                 case 4:
-                    return ExerciseConstructor(Ex5.Text, We5.Text, Se5.Text, Re5.Text);
+                    ex = new Exercise(Ex5.Text, int.Parse(We5.Text), int.Parse(Se5.Text), int.Parse(Re5.Text), int.Parse(Re5.Text));
+                    return ex;
                 case 5:
-                    return ExerciseConstructor(Ex6.Text, We6.Text, Se6.Text, Re6.Text);
+                    ex = new Exercise(Ex6.Text, int.Parse(We6.Text), int.Parse(Se6.Text), int.Parse(Re6.Text), int.Parse(Re6.Text));
+                    return ex;
                 default:
-                    return new Exercise("Exercício", 0, 0, 0, 0);
+                    return ex;
             }
         }
 
@@ -107,6 +106,7 @@ namespace AppAcad.Pages
                     break;
             }
         }
+
         private Exercise ExerciseConstructor(string name, string weight, string sets, string rep)
         {
             try
@@ -115,7 +115,7 @@ namespace AppAcad.Pages
             }
             catch (FormatException)
             {
-                warning = true;
+                Warning.IsVisible = true;
                 return new Exercise(name, 0, 0, 0, 0);
             }
         }

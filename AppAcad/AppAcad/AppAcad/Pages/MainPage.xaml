@@ -8,12 +8,15 @@
 
     <StackLayout>
         <!-- Place new controls here -->
-
-        <Label x:Name="WarningLabel" 
-            Margin="25,0,25,0"
-            Text="Nao foi possivel carregar o arquivo"
-            FontSize="20"
-            IsVisible="false"/>
+        <Label x:Name="WarningLabelLoad" IsVisible="false"
+               Text="Nao foi possivel carregar o arquivo" FontSize="20" TextColor="Red" 
+               Margin="25,0,25,0" VerticalOptions="CenterAndExpand"/>
+        <Label x:Name="WarningLabelMain" IsVisible="false"
+               Text="Altura, peso e cintura devem ser números" FontSize="20" TextColor="Red" 
+               Margin="25,0,25,0" VerticalOptions="CenterAndExpand"/>
+        <Label x:Name="WarningLabelExercise" IsVisible="false"
+               Text="Peso, vezes e sets devem ser inteiros" FontSize="20" TextColor="Red" 
+               Margin="20,0,25,0" VerticalOptions="CenterAndExpand"/>
         <Grid Margin="25,25,25,25">
             <Grid.RowDefinitions>
                 <RowDefinition Height="90"/>
@@ -57,5 +60,4 @@
             VerticalOptions="EndAndExpand"
             Text="Next"/>
     </StackLayout>
-
 </ContentPage>

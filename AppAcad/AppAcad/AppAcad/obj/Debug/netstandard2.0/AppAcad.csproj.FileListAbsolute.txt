@@ -14,3 +14,4 @@ C:\Users\Lucas\source\repos\AppAcad\AppAcad\AppAcad\AppAcad\obj\Debug\netstandar
 C:\Users\Lucas\source\repos\AppAcad\AppAcad\AppAcad\AppAcad\obj\Debug\netstandard2.0\Pages\MainPage.xaml.g.cs
 C:\Users\Lucas\source\repos\AppAcad\AppAcad\AppAcad\AppAcad\obj\Debug\netstandard2.0\Pages\ExercisePage1.xaml.g.cs
 C:\Users\Lucas\source\repos\AppAcad\AppAcad\AppAcad\AppAcad\obj\Debug\netstandard2.0\Pages\ExercisePage2.xaml.g.cs
+C:\Users\Lucas\source\repos\AppAcad\AppAcad\AppAcad\AppAcad\obj\Debug\netstandard2.0\Pages\ExercisePage.xaml.g.cs

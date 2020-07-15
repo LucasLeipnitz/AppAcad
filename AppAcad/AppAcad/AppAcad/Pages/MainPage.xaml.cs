@@ -40,6 +40,7 @@ namespace AppAcad
             for(int i = 0; i < 6; i++)
             {
                 Control.User.AddExercise(ExPage1.GetExercise(i), 0);
+                Control.User.AddExercise(ExPage1.GetExPage().GetExercise(i), 1);
             }
         }
 
@@ -48,6 +49,7 @@ namespace AppAcad
             if (Control.CheckIfFileExists())
             {
                 Control.LoadUser();
+                WarningLabelLoad.IsVisible = false;
                 NameEntry.Text = Control.User.Name;
                 HeightEntry.Text = Control.User.Height.ToString();
                 WeightEntry.Text = Control.User.Weight.ToString();
@@ -55,23 +57,41 @@ namespace AppAcad
                 for (int i = 0; i < 6; i++)
                 {
                     ExPage1.SetExercise(Control.User.GetDay(0).GetExercise(i),i);
+                    ExPage1.GetExPage().SetExercise(Control.User.GetDay(1).GetExercise(i), i);
                 }
             }
             else
             {
-                WarningLabel.IsVisible = true;
+                WarningLabelLoad.IsVisible = true;
             }
         }
 
         private void SaveButton_Clicked(object sender, EventArgs e)
         {
             Control.User.Name = NameEntry.Text;
-            Control.User.Height = float.Parse(HeightEntry.Text);
-            Control.User.Weight = float.Parse(WeightEntry.Text);
-            Control.User.Waist = float.Parse(WaistEntry.Text);
+            WarningLabelMain.IsVisible = false;
+            try
+            {
+                Control.User.Height = float.Parse(HeightEntry.Text);
+                Control.User.Weight = float.Parse(WeightEntry.Text);
+                Control.User.Waist = float.Parse(WaistEntry.Text);
+            }
+            catch (FormatException)
+            {
+                WarningLabelMain.IsVisible = true;
+            }
+
+            WarningLabelExercise.IsVisible = false;
+            ExPage1.DeactivateWarning();
+            ExPage1.GetExPage().DeactivateWarning();
             for (int i = 0; i < 6; i++)
             {
                 Control.User.GetDay(0).SetExercise(ExPage1.GetExercise(i),i);
+                Control.User.GetDay(1).SetExercise(ExPage1.GetExPage().GetExercise(i), i);
+            }
+            if(ExPage1.GetWarning() || ExPage1.GetExPage().GetWarning())
+            {
+                WarningLabelExercise.IsVisible = true;
             }
             Control.SaveUser();
         }

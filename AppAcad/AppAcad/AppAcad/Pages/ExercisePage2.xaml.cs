@@ -12,36 +12,101 @@ namespace AppAcad.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ExercisePage2 : ContentPage
     {
+
+        private bool warning = false;
+
         public ExercisePage2()
         {
             InitializeComponent();
         }
 
+        public bool GetWarning()
+        {
+            return warning;
+        }
+
+        public void DeactivateWarning()
+        {
+            warning = false;
+            //WarningLabel.IsVisible = false;
+        }
+
         public Exercise GetExercise(int index)
         {
-            Exercise ex = new Exercise("Exercício", 0, 0, 0, 0);
             switch (index)
             {
                 case 0:
-                    ex = new Exercise(Ex1.Text, int.Parse(We1.Text), int.Parse(Se1.Text), int.Parse(Re1.Text), int.Parse(Re1.Text));
-                    return ex;
+                    return ExerciseConstructor(Ex1.Text, We1.Text, Se1.Text, Re1.Text);
                 case 1:
-                    ex = new Exercise(Ex2.Text, int.Parse(We2.Text), int.Parse(Se2.Text), int.Parse(Re2.Text), int.Parse(Re2.Text));
-                    return ex;
+                    return ExerciseConstructor(Ex2.Text, We2.Text, Se2.Text, Re2.Text);
                 case 2:
-                    ex = new Exercise(Ex3.Text, int.Parse(We3.Text), int.Parse(Se3.Text), int.Parse(Re3.Text), int.Parse(Re3.Text));
-                    return ex;
+                    return ExerciseConstructor(Ex3.Text, We3.Text, Se3.Text, Re3.Text);
                 case 3:
-                    ex = new Exercise(Ex4.Text, int.Parse(We4.Text), int.Parse(Se4.Text), int.Parse(Re4.Text), int.Parse(Re4.Text));
-                    return ex;
+                    return ExerciseConstructor(Ex4.Text, We4.Text, Se4.Text, Re4.Text);
                 case 4:
-                    ex = new Exercise(Ex5.Text, int.Parse(We5.Text), int.Parse(Se5.Text), int.Parse(Re5.Text), int.Parse(Re5.Text));
-                    return ex;
+                    return ExerciseConstructor(Ex5.Text, We5.Text, Se5.Text, Re5.Text);
                 case 5:
-                    ex = new Exercise(Ex6.Text, int.Parse(We6.Text), int.Parse(Se6.Text), int.Parse(Re6.Text), int.Parse(Re6.Text));
-                    return ex;
+                    return ExerciseConstructor(Ex6.Text, We6.Text, Se6.Text, Re6.Text);
                 default:
-                    return ex;
+                    return new Exercise("Exercício", 0, 0, 0, 0);
+            }
+        }
+
+        public void SetExercise(Exercise exercise, int index)
+        {
+            switch (index)
+            {
+                case 0:
+                    Ex1.Text = exercise.Name;
+                    We1.Text = exercise.Kg.ToString();
+                    Se1.Text = exercise.Sets.ToString();
+                    Re1.Text = exercise.MinRepeat.ToString();
+                    break;
+                case 1:
+                    Ex2.Text = exercise.Name;
+                    We2.Text = exercise.Kg.ToString();
+                    Se2.Text = exercise.Sets.ToString();
+                    Re2.Text = exercise.MinRepeat.ToString();
+                    break;
+                case 2:
+                    Ex3.Text = exercise.Name;
+                    We3.Text = exercise.Kg.ToString();
+                    Se3.Text = exercise.Sets.ToString();
+                    Re3.Text = exercise.MinRepeat.ToString();
+                    break;
+                case 3:
+                    Ex4.Text = exercise.Name;
+                    We4.Text = exercise.Kg.ToString();
+                    Se4.Text = exercise.Sets.ToString();
+                    Re4.Text = exercise.MinRepeat.ToString();
+                    break;
+                case 4:
+                    Ex5.Text = exercise.Name;
+                    We5.Text = exercise.Kg.ToString();
+                    Se5.Text = exercise.Sets.ToString();
+                    Re5.Text = exercise.MinRepeat.ToString();
+                    break;
+                case 5:
+                    Ex6.Text = exercise.Name;
+                    We6.Text = exercise.Kg.ToString();
+                    Se6.Text = exercise.Sets.ToString();
+                    Re6.Text = exercise.MinRepeat.ToString();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private Exercise ExerciseConstructor(string name, string weight, string sets, string rep)
+        {
+            try
+            {
+                return new Exercise(name, int.Parse(weight), int.Parse(sets), int.Parse(rep), int.Parse(rep));
+            }
+            catch (FormatException)
+            {
+                warning = true;
+                return new Exercise(name, 0, 0, 0, 0);
             }
         }
     }
